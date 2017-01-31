@@ -11,7 +11,11 @@ for user in users:
 	shell = user.split(":")[-1][:-1]
 	shells[login] = shell
 
-print(shells['root'])
-print(shells['imaginario'])
+usuarios = ['root', 'imaginario']
+for usuario in usuarios:
+	try:
+		print(shells[usuario])
+	except KeyError:
+		print("El usuario 'imaginario' no existe")
 
 print("Número de usuarios: " + str(len(users)))
